@@ -1,10 +1,10 @@
 +++
-date = "2015-03-25T04:52:23+04:30"
+date = "2014-09-01T14:32:00+04:30"
 draft = false
 slug = "learn-android-programming"
 title = "روش پیشنهادی من برای یادگیری برنامه‌نویسی اندروید"
 topics = ["android"]
-shamsiDate = "سوم مرداد ۱۳۹۴"
+shamsiDate = "۱۰ شهریورماه ۱۳۹۳"
 
 +++
 
