@@ -1,0 +1,11 @@
+name = "Vivid"
+license = "MIT"
+# licenselink = "https://github.com/.../.../LICENSE.md"
+description = "A simple theme for my personal blog"
+homepage = "http://alireza.es/"
+tags = ["personal", "minimal"]
+features = []
+
+[author]
+  name = "Alireza Ahmadi"
+  homepage = "http://alireza.es/"

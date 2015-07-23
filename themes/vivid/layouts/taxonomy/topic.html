@@ -1,0 +1,31 @@
+{{ $baseURL := .Site.BaseURL }}
+{{ $topic := urlize .Title }}
+
+{{ partial "header.html" . }}
+    <section id="posts" class="archive">
+        <div class="container">
+            <div id="label">
+                <img src="{{ $baseURL }}/images/tag.svg" alt=""> مطالب مرتبط با <a href="{{ $baseURL }}/topics/{{ $topic }}/">#{{ index .Site.Data.topics.list $topic }}</a>
+            </div>
+
+            {{ $list := .Site.Data.topics.list }}
+
+            {{ range $index, $page := .Paginator.Pages }}
+                <article class="post">
+                    <header class="post-header">
+                        <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+
+                        <aside class="post-meta">
+                            <span class="post-meta-holder">
+                                <time datetime="{{ .Date }}" class="post-date">{{ .Params.shamsidate }}</time> &bull;
+                                {{ range $key, $value := .Params.topics }}
+                                    <a class="post-category" href="{{ $baseURL }}/topics/{{ $value }}/">{{ index $list $value }}</a>
+                                {{ end }}
+                            </span>
+                        </aside>
+                    </header> <!-- .post-header -->
+                </article> <!-- .post -->
+            {{ end }}
+        </div>
+    </section> <!-- #posts -->
+{{ partial "footer.html" }}
