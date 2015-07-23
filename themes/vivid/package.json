@@ -1,9 +1,8 @@
 {
   "name": "vivid",
   "version": "0.1.0",
-  "description": "A simple theme for my personal blog",
+  "description": "A colorful theme for my personal blog",
   "author": "Alireza Ahmadi (info@alireza.es)",
-  "license": "MIT",
   "private": true,
   "dependencies": {
     "coffee-script": "^1.9.1",
