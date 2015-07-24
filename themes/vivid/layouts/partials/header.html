@@ -33,13 +33,6 @@
     {{ end }}
 
     <link rel="stylesheet" href="{{ $baseURL }}/styles/style.css" />
-    <script type="text/javascript" src="{{ $baseURL }}/scripts/highlight.pack.js"></script>
-    <script>
-        hljs.configure({
-            tabReplace: '   '
-        })
-        hljs.initHighlighting();
-    </script>
 </head>
 {{ $slug := .Slug }}
 <body{{ with .Section }} class="type-{{ . }}{{ if ne . "post" }} {{ . }}-{{ $slug }}{{ end }}"{{ end }}>
