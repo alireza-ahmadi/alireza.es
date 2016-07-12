@@ -66,7 +66,6 @@ section#posts {
 
           &:hover, &:active {
             color: @color-primary;
-            background:#FFFFFF;
           }
         }
       }
@@ -74,7 +73,7 @@ section#posts {
       aside.post-meta {
         direction: rtl;
         clear: both;
-        font-size: 1.4em;
+        font-size: 1.35em;
         line-height: 2.4em;
         height: 2.4em;
         display: block;
@@ -91,45 +90,66 @@ section#posts {
           a.post-category {
             color: inherit;
             text-decoration: none;
+            background: url(../images/icon-category.png) no-repeat 100% center;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.2em;
+            border-radius: 20px 0px 0px 20px;
+            transition: all .1s linear;
+            padding-left: 5px;
 
             &:hover, &:active {
-              color: #000000;
-              background: transparent;
+              background-color: @color-alternative;
+              -webkit-tap-highlight-color: rgba(0,0,0,0);
             }
+          }
+
+          time.post-date {
+            background: url(../images/icon-date.png) no-repeat 100% center;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.2em;
+            margin-left: 0.95em;
           }
         }
       }
     }
 
     div.post-content {
+      box-sizing: border-box;
+      padding: 50px 80px;
+
+      @media (max-width: 760px) {
+        padding: 20px 0px;
+      }
+
       h1, h2, h3, h4, h5, h6 {
         direction: rtl;
         padding-bottom: 10px;
+        padding-top: 10px;
       }
 
       h1 {
-        font-size: 24px;
+        font-size: 1.8em;
       }
       h2 {
-        font-size: 21px;
+        font-size: 1.6em;
       }
       h3 {
-        font-size: 18px;
+        font-size: 1.3em;
       }
       h4, h5, h6 {
-        font-size: 16px;
+        font-size: 1.1em;
       }
 
       p {
         direction: rtl;
-        margin-bottom: 15px;
-        font-size: 1.01em;
-        line-height: 1.8em;
+        margin-bottom: 0.95em;
+        font-size: 1.2em;
+        line-height: 1.9em;
       }
 
       blockquote {
         direction: rtl;
-        font-size: 1.04;
+        font-size: 1.1em;
         line-height: 1.6em;
         padding: 5px 20px;
         margin: 20px 0px;
@@ -138,12 +158,12 @@ section#posts {
       }
 
       a {
-        color: @color-alternative;
-        .linkEffect(@color-alternative, #FFFFFF);
+        color: @color-primary;
+        .linkEffect(@color-primary, @color-white);
       }
 
       ul {
-        padding-right: 20px;
+        padding-right: 1.25em;
         box-sizing: border-box;
         direction: rtl;
         list-style-type: none;
@@ -155,6 +175,7 @@ section#posts {
         }
       }
 
+      // Deprecated
       div#table-of-contents {
          padding-top: 5px;
          padding-bottom: 5px;
@@ -162,6 +183,7 @@ section#posts {
          box-sizing: border-box;
          cursor: pointer;
          transition: all .2s linear;
+         .disableTapFeedback();
 
          ul {
             padding-right: 2px;
@@ -207,6 +229,7 @@ section#posts {
           display: inline-block;
           padding: 0px 5px;
           background: @color-background-grey;
+          border-radius: 3px;
           font-family: consolas, menlo, monaco, monospace;
           font-size: .85em;
         }

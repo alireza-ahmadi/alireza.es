@@ -6,24 +6,20 @@
     <div class="container">
         <article class="post">
             <header class="post-header">
-                <aside class="post-meta">
-                        <span class="post-meta-holder">
-                            <time datetime="{{ .Date }}" class="post-date">{{ .Params.shamsidate }}</time> &bull;
-                            {{ range $key, $value := .Params.topics }}
-                                <a class="post-category" href="{{ $baseURL }}/topics/{{ $value }}/">{{ index $list $value }}</a>
-                            {{ end }}
-                        </span>
-                </aside>
-
-                <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-            </header> <!-- .post-header -->
+				<aside class="post-meta">
+					<span class="post-meta-holder">
+						<time datetime="{{ .Date }}" class="post-date">{{ .Params.shamsidate }}</time>
+						{{ range $key, $value := .Params.topics }}
+							<a class="post-category" href="{{ $baseURL }}/topics/{{ $value }}/">{{ index $list $value }}</a>
+						{{ end }}
+					</span>
+				</aside>
+				
+				<h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+			</header> <!-- .post-header -->
 
             <div class="post-content">
                 {{ if .TableOfContents }}
-                    <div id="table-of-contents">
-                        <h1>فهرست <span id="toggle-toc"></span></h1>
-                        {{ .TableOfContents }}
-                    </div> <!-- #table-of-contents -->
                 {{ end }}
 
                 {{ .Content }}
