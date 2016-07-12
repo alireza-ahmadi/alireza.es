@@ -4,7 +4,7 @@ draft = false
 shamsiDate = "۲ فروردین‌ماه ۱۳۹۵"
 slug = "logging-best-practices"
 title = "اصول Logging  در پروژه‌های نرم‌افزاری"
-topics = ["softwareDevelopment"]
+topics = ["softwaredevelopment"]
 
 +++
 
