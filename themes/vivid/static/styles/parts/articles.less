@@ -41,27 +41,32 @@ section#posts {
   }
 
   article.post {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
+    margin-top: 40px;
     color: @color-text-normal;
     header.post-header {
-      padding-bottom: 15px;
+      padding-bottom: 25px;
 
       h1.post-title {
         clear: both;
         direction: rtl;
-        font-size: 22px;
+        font-size: 2.6em;
         position: relative;
         z-index: 30;
+        text-align: center;
 
         a {
-          color: @color-text-deep-dark;
+          color: @color-text-dark;
           text-decoration: none;
-          line-height: 1.9em;
-          background: @color-primary;
-          transition: all .2s linear;
+          line-height: 1.6em;
+          transition: all .1s linear;
+          padding-bottom: 5px;
+          text-align: center;
+          -webkit-tap-highlight-color: rgba(0,0,0,0);
 
           &:hover, &:active {
-            background: @color-primary-hover;
+            color: @color-primary;
+            background:#FFFFFF;
           }
         }
       }
@@ -69,19 +74,19 @@ section#posts {
       aside.post-meta {
         direction: rtl;
         clear: both;
-        font-size: 0.90em;
+        font-size: 1.4em;
         line-height: 2.4em;
         height: 2.4em;
         display: block;
         overflow: hidden;
-        font-weight: 700;
+        font-weight: normal;
         color: @color-text-meta;
         position: relative;
         z-index: 20;
+        text-align: center;
 
         span.post-meta-holder {
           padding: 6px 0px 4px;
-          background: @color-background-grey;
 
           a.post-category {
             color: inherit;
