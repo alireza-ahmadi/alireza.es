@@ -5,7 +5,7 @@
     <section id="posts" class="archive">
         <div class="container">
             <div id="label">
-                <img src="{{ $baseURL }}/images/tag.svg" alt=""> مطالب مرتبط با <a href="{{ $baseURL }}/topics/{{ $topic }}/">#{{ index .Site.Data.topics.list $topic }}</a>
+                مطالب مرتبط با <a href="{{ $baseURL }}/topics/{{ $topic }}/">#{{ index .Site.Data.topics.list $topic }}</a>
             </div>
 
             {{ $list := .Site.Data.topics.list }}

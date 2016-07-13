@@ -10,33 +10,24 @@ section#posts {
     max-width: 100%;
     display: block;
     clear: both;
-    padding: .2em 0px .5em;
-    font-size: 26px;
+    padding: 1em 0px 1.4em;
+    font-size: 2em;
     z-index: 60;
-    text-align: right;
+    text-align: center;
     font-weight: bold;
     direction:rtl;
     position: relative;
-    color: #bbbbbb;
+    color: @color-text-dark;
     line-height: 1.6em;
     top:0px;
 
     a {
-      .linkEffect(@color-alternative, #FFFFFF);
+      .linkEffect(@color-primary,@color-white);
       display: inline-block;
       position: relative;
       text-decoration: none;
-      color: @color-alternative;
+      color: @color-primary;
       box-sizing: border-box;
-    }
-
-    img {
-      height: 1em;
-      vertical-align: middle;
-    }
-
-    @media (max-width: 400px) {
-      font-size: 22px !important;
     }
   }
 
@@ -54,6 +45,8 @@ section#posts {
         position: relative;
         z-index: 30;
         text-align: center;
+        max-width:85vw;
+        margin: 0px auto;
 
         a {
           color: @color-text-dark;
