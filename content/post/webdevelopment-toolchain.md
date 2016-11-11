@@ -1,10 +1,12 @@
 +++
+topics = [
+  "webdevelopment",
+]
+shamsiDate = "۱۷ تیر ماه ۱۳۹۳"
 date = "2014-07-08T15:17:00+04:30"
 draft = false
 slug = "webdevelopment-toolchain"
 title = "ابزارهایی که من برای توسعه وب استفاده می کنم"
-topics = ["webdevelopment"]
-shamsiDate = "۱۷ تیرماه ۱۳۹۳"
 
 +++
 

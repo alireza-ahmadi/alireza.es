@@ -1,10 +1,12 @@
 +++
+topics = [
+  "softwaredevelopment",
+]
 date = "2016-03-21T19:53:55+04:30"
 draft = false
-shamsiDate = "۲ فروردین‌ماه ۱۳۹۵"
+shamsiDate = "۲ فروردین ماه ۱۳۹۵"
 slug = "logging-best-practices"
 title = "اصول Logging  در پروژه‌های نرم‌افزاری"
-topics = ["softwaredevelopment"]
 
 +++
 

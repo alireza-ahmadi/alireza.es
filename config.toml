@@ -2,6 +2,7 @@ baseURL = "http://alireza.es"
 languageCode = "en-us"
 title = "بلاگ علیرضا احمدی"
 theme = "vivid"
+shamsiDateFormat = "d MMM ماه yyyy"
 
 [indexes]
    topic = "topics"
