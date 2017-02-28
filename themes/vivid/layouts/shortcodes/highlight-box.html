@@ -1,0 +1,4 @@
+<div class="highlight-box{{ if .Get "color" }} highlight-box-{{ .Get "color" }}{{ end }}">
+	<h6>{{ if .Get "title" }}{{ .Get "title" }}{{ else }}توضیحات{{ end }}</h6>
+	{{ .Inner }}
+</div>
