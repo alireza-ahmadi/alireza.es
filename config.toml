@@ -5,4 +5,7 @@ theme = "vivid"
 shamsiDateFormat = "d MMM ماه yyyy"
 
 [indexes]
-   topic = "topics"
+    topic = "topics"
+
+[sitemap]
+    priority = "0.5"
