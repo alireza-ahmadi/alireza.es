@@ -2,7 +2,7 @@
   "name": "vivid",
   "version": "0.2.0",
   "description": "A minimal theme for my personal blog",
-  "author": "Alireza Ahmadi (info@alireza.es)",
+  "author": "Alireza Ahmadi (me@alireza.es)",
   "private": true,
   "dependencies": {
     "gulp": "^3.9.1",
