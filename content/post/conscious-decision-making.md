@@ -1,6 +1,6 @@
 +++
 topics = ["business"]
-slug = "consciouse-decision-making"
+slug = "conscious-decision-making"
 title = "تصمیم‌گیری براساس واقعیت‌ها و نه فرضیات"
 draft = false
 date = "2017-11-27T10:46:24+03:30"
