@@ -23,7 +23,14 @@
     <meta name="twitter:url" content="{{ .Permalink }}" />
     <meta name="twitter:title" content="{{ .Title }}" />
     <meta name="twitter:description" content="{{ $description }}" />
-    <meta name="twitter:image" content="{{ $baseURL }}/images/social-banner-medium.png" />
+	<meta name="twitter:image" content="{{ $baseURL }}/images/social-banner-medium.png" />
+	
+	{{ .Params.canonicalUrl }}
+	
+	{{ if not .IsNode }}{{ if .Params.canonicalUrl }}
+		<!-- Canonical URL for search engine optimization -->
+		<link rel="canonical" href="{{ .Params.canonicalUrl }}" />
+	{{ end }}{{ end }}
 
     <!-- RSS Links -->
     {{ if .RSSLink }}
