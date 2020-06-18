@@ -4,8 +4,9 @@ title = "بلاگ علیرضا احمدی"
 theme = "vivid"
 shamsiDateFormat = "d MMM ماه yyyy"
 
-[indexes]
-    topic = "topics"
+paginate = 1000
+disableKinds = ["taxonomy", "taxonomyTerm", "section"]
+ignoreFiles = ["\\.less$"]
 
 [sitemap]
     priority = "0.5"

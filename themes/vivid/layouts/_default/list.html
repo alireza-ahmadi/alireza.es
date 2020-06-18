@@ -1,1 +1,27 @@
-<!-- TODO : use me -->
+{{ $list := .Site.Data.topics.list }}
+{{ $baseURL := .Site.BaseURL }}
+
+{{ partial "header.html" . }}
+    <section id="posts">
+        <div class="container">
+            {{ range $index, $page := where .Paginator.Pages "Section" "post" }}
+                <article class="post">
+                    <header class="post-header">
+                        <aside class="post-meta">
+                            <span class="post-meta-holder">
+                                <time datetime="{{ .Date }}" class="post-date">{{ .Params.shamsidate }}</time>
+                            </span>
+                        </aside>
+						
+                        <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+                    </header> <!-- .post-header -->
+
+                </article> <!-- .post -->
+            {{ end }}
+
+            <!--
+                TODO : improve posts list, add pagination
+            -->
+        </div>
+    </section> <!-- #posts -->
+{{ partial "footer.html" }}

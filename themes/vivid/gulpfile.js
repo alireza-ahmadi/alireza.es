@@ -17,18 +17,18 @@ gulp.task("less", (done) => {
   };
 
   gulp
-    .src("static/styles/style.less")
+    .src("styles/style.less")
     .pipe(less())
     .on("error", errorHandler)
     .pipe(autoprefixer(prefixOptions))
     .pipe(cleanCSS())
-    .pipe(gulp.dest("static/styles"));
+    .pipe(gulp.dest("static"));
   done();
 });
 
 // Watch changes
 gulp.task("watch", () => {
-  gulp.watch("static/styles/**/*.less", gulp.series(["less"]));
+  gulp.watch("styles/**/*.less", gulp.series(["less"]));
 });
 
 gulp.task("build", gulp.series(["less"]));
