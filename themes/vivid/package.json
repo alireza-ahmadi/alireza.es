@@ -1,14 +1,14 @@
 {
   "name": "vivid",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A minimal theme for my personal blog",
   "author": "Alireza Ahmadi (me@alireza.es)",
   "private": true,
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^2.0.13",
-    "gulp-less": "^3.2.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-less": "^4.0.1",
     "gulp-util": "^3.0.7"
   }
 }
