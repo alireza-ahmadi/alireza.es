@@ -1,24 +1,12 @@
 {{ $baseURL := .Site.BaseURL }}
 		<footer id="main-footer">
 			<div class="container">
-				<p>من <b>علیرضا احمدی</b> هستم، یک توسعه‌دهنده نرم‌افزار که به طور تخصصی بر روی توسعه وب تمرکز داره. در صورتی که تمایل دارید بیشتر درباره من بدونید به صفحه <a href="{{ $baseURL }}/page/about/"><img class="avatar" src="{{ $baseURL }}/images/avatar.jpg"/> درباره من</a>
-				مراجعه کنید، برای تماس با من هم می‌تونید از طریق <a href="mailto:me@alireza.es">ایمیل</a> اقدام کنید یا به من در <a href="https://twitter.com/alireza94"><img class="twitter" src="{{ $baseURL }}/images/twitter.svg"/> توییتر</a> یا <a href="https://ir.linkedin.com/in/alirezaahmadi">لینکد-این</a> پیام بدید.</p>
+				<p>من <strong>علیرضا احمدی</strong> هستم، در صورتی که تمایل دارید بیشتر با من آشنا بشید می‌تونید به صفحه <a href="{{ $baseURL }}/page/about/"><img class="avatar" src="{{ $baseURL }}/images/avatar.jpg"/> درباره من</a>
+				مراجعه کنید؛ برای تماس با من هم می‌تونید از طریق <a href="mailto:me@alireza.es">ایمیل</a> اقدام کنید یا به من در <a href="https://twitter.com/alireza94"><img class="twitter" src="{{ $baseURL }}/images/twitter.svg"/> توییتر</a> یا <a href="https://ir.linkedin.com/in/alirezaahmadi">لینکد-این</a> پیام بدید.</p>
 				<a href="{{ $baseURL }}/page/about/" id="about-link">درباره من</a>
-				<p class="copyright">راه‌اندازی شده با <a href="http://gohugo.io">هوگو</a>. لطفا مطالب را بدون ذکر منبع کپی نکنید.</p>
+				<p class="copyright">لطفا مطالب را بدون ذکر منبع کپی نکنید.</p>
 			</div>
 		</footer>
 	</div> <!-- #view -->
-
-	<!-- Syntax Highlighting -->
-    <script type="text/javascript" src="{{ $baseURL }}/scripts/highlight.pack.js"></script>
-    <script async type="text/javascript" src="{{ $baseURL }}/scripts/autotrack.js"></script>
-    <script>
-		// Remove tap highlight effect
-		document.addEventListener('touchstart', function(){}, true);
-        hljs.configure({
-            tabReplace: '   '
-        })
-        hljs.initHighlighting();
-    </script>
 </body>
 </html>

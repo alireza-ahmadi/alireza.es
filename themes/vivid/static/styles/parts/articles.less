@@ -14,15 +14,15 @@ section#posts {
     font-size: 2em;
     z-index: 60;
     text-align: center;
-    font-weight: bold;
-    direction:rtl;
+    font-weight: 500;
+    direction: rtl;
     position: relative;
     color: @color-text-dark;
     line-height: 1.6em;
-    top:0px;
+    top: 0px;
 
     a {
-      .linkEffect(@color-primary,@color-white);
+      .linkEffect(@color-primary, @color-white);
       display: inline-block;
       position: relative;
       text-decoration: none;
@@ -32,21 +32,27 @@ section#posts {
   }
 
   article.post {
-    margin-bottom: 60px;
-    margin-top: 40px;
+    margin-bottom: 1.8em;
+    margin-top: 2.4em;
     color: @color-text-normal;
+
     header.post-header {
-      padding-bottom: 25px;
+      padding-bottom: 20px;
 
       h1.post-title {
         clear: both;
         direction: rtl;
-        font-size: 2.6em;
+        font-size: 2.2em;
         position: relative;
         z-index: 30;
         text-align: center;
-        max-width:85vw;
+        max-width: 85vw;
+        font-weight: 500;
         margin: 0px auto;
+
+        @media (max-width: 480px) {
+          font-size: 2em;
+        }
 
         a {
           color: @color-text-dark;
@@ -55,9 +61,10 @@ section#posts {
           transition: all .1s linear;
           padding-bottom: 5px;
           text-align: center;
-          -webkit-tap-highlight-color: rgba(0,0,0,0);
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-          &:hover, &:active {
+          &:hover,
+          &:active {
             color: @color-primary;
           }
         }
@@ -66,41 +73,27 @@ section#posts {
       aside.post-meta {
         direction: rtl;
         clear: both;
-        font-size: 1.35em;
-        line-height: 2.4em;
-        height: 2.4em;
+        font-size: 1.25em;
+        line-height: 2em;
+        height: 2em;
         display: block;
         overflow: hidden;
-        font-weight: normal;
+        font-weight: 500;
         color: @color-text-meta;
         position: relative;
         z-index: 20;
         text-align: center;
+        margin-bottom: .5em;
 
         span.post-meta-holder {
           padding: 6px 0px 4px;
 
-          a.post-category {
-            color: inherit;
-            text-decoration: none;
-            background: url(../images/icon-category.png) no-repeat 100% center;
-            background-size: 1.5em 1.5em;
-            padding-right: 2.2em;
-            border-radius: 20px 0px 0px 20px;
-            transition: all .1s linear;
-            padding-left: 5px;
-
-            &:hover, &:active {
-              background-color: @color-alternative;
-              -webkit-tap-highlight-color: rgba(0,0,0,0);
-            }
-          }
-
           time.post-date {
-            background: url(../images/icon-date.png) no-repeat 100% center;
-            background-size: 1.5em 1.5em;
-            padding-right: 2.2em;
-            margin-left: 0.95em;
+            display: inline-block;
+            padding: 0px 14px;
+            width: fit-content;
+            border-radius: 8px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
           }
         }
       }
@@ -120,7 +113,12 @@ section#posts {
         width: 100% !important;
       }
 
-      h1, h2, h3, h4, h5, h6 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         direction: rtl;
         padding-bottom: 10px;
         padding-top: 10px;
@@ -129,14 +127,34 @@ section#posts {
       h1 {
         font-size: 1.8em;
       }
+
       h2 {
         font-size: 1.6em;
       }
+
       h3 {
         font-size: 1.3em;
       }
-      h4, h5, h6 {
+
+      h4,
+      h5,
+      h6 {
         font-size: 1.1em;
+      }
+
+      pre {
+        background-color: #eaeaea;
+        font-family: WebFireCode, "Fire Code", consolas;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-bottom: 1em;
+        border-radius: 4px;
+        font-size: 1em;
+      }
+
+      b,
+      strong {
+        font-weight: 500;
       }
 
       p {
@@ -148,12 +166,15 @@ section#posts {
 
       blockquote {
         direction: rtl;
-        font-size: 1.1em;
+        font-size: 0.9em;
         line-height: 1.6em;
-        padding: 0.3em 1.25em;
+        padding: 0.9em 1.5em 0.01em 1.5em;
         margin: 1.25em 0px;
+        border-radius: 8px;
+        border-top-right-radius: 0px;
         box-sizing: border-box;
-        border-right: .25em #f9f9f9 solid;
+        background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.15' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+        font-style: italic;
       }
 
       a {
@@ -176,20 +197,25 @@ section#posts {
       }
 
       del {
-        opacity: 0.4;
-        background:#F2B4C0;
+        color: #fb6a6a !important;
+        background: lighten(#fb6a6a, 25%);
+
+        a {
+          color: inherit;
+          text-decoration: line-through;
+        }
       }
 
       div.highlight-box {
         box-sizing: border-box;
-        border-radius: 3px;
-        padding: 1em 1em 1.25em 1em;
+        border-radius: 12px;
+        padding: .7em 1.05em 1.2em 1.05em;
         margin-bottom: 1.6em;
-        background: @color-white;
+        font-size: .95em;
 
         h6 {
-          font-weight: bold;
-          font-size: 1.875em;
+          font-weight: 500;
+          font-size: 1.7em;
           color: @color-text-dark;
         }
 
@@ -198,45 +224,30 @@ section#posts {
         }
 
         &.highlight-box-red {
-          background: @color-background-deprecated;
-          
-          h6 {
-            color: @color-primary;
-          }
+          background: lighten(#fb6a6a, 26%);
+          border: 2px lighten(#fb6a6a, 10%) solid;
+          box-shadow: 0px 0px 0px 5px lighten(#fb6a6a, 27%);
         }
 
         &.highlight-box-green {
-          background: @color-background-description;
-
-          h6 {
-            color: @color-text-description;
-          }
+          background: lighten(#40dd7e, 35%);
+          border: 2px lighten(#40dd7e, 15%) solid;
+          box-shadow: 0px 0px 0px 5px lighten(#40dd7e, 38%);
         }
       }
 
       div.related-links {
         box-sizing: border-box;
-        border-radius: 3px;
-        padding: 1em .8em 0em .8em;
+        border-radius: 8px;
+        padding: .8em .6em 0em .6em;
         margin-bottom: .5em;
         margin-top: 2.5em;
-        border: 4px @color-background-grey solid;
+        border: 2px @color-background-grey solid;
         position: relative;
         overflow: hidden;
 
-        &::before {
-          content: " ";
-          width: 10em;
-          height: 10em;
-          position: absolute;
-          left: -1em;
-          top: -1em;
-          background: url(../images/icon-link.svg) no-repeat 0 0;
-          background-size: 10em 10em;
-        }
-
         h6 {
-          font-weight: bold;
+          font-weight: 500;
           font-size: 1.6em;
           color: @color-text-dark;
           padding-right: 1em;
@@ -259,52 +270,54 @@ section#posts {
 
       // Deprecated
       div#table-of-contents {
-         padding-top: 5px;
-         padding-bottom: 5px;
-         margin-bottom: 0px;
-         box-sizing: border-box;
-         cursor: pointer;
-         transition: all .2s linear;
-         .disableTapFeedback();
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-bottom: 0px;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: all .2s linear;
+        .disableTapFeedback();
 
-         ul {
-            padding-right: 2px;
-            border-right: none !important;
-            font-weight: 400;
-            font-size: 15px;
+        ul {
+          padding-right: 2px;
+          border-right: none !important;
+          font-weight: 400;
+          font-size: 15px;
 
-            ul {
-               padding-right: 15px;
-               margin-top: 0px;
-               margin-bottom: 0px;
-            }
+          ul {
+            padding-right: 15px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+          }
 
-            li {
-               line-height: 2em !important;
-            }
-         }
+          li {
+            line-height: 2em !important;
+          }
+        }
 
-         h1 {
-            color: lighten(@color-text-normal, 25%);
-            padding-top: 5px;
-            padding-bottom: 45px;
-            box-sizing: border-box;
-            font-size: 22px;
-            line-height: 30px;
-            height: 40px;
+        h1 {
+          color: lighten(@color-text-normal, 25%);
+          padding-top: 5px;
+          padding-bottom: 45px;
+          box-sizing: border-box;
+          font-size: 22px;
+          line-height: 30px;
+          height: 40px;
 
-            span#toggle-toc {
-               background: url(../images/table-of-contents.svg) no-repeat right center;
-               background-size: 20px 20px;
-               display: block;
-               float: right;
-               height:30px;
-               width: 28px;
-            }
-         }
+          span#toggle-toc {
+            background: url(../images/table-of-contents.svg) no-repeat right center;
+            background-size: 20px 20px;
+            display: block;
+            float: right;
+            height: 30px;
+            width: 28px;
+          }
+        }
       }
 
-      p, blockquote, ul {
+      p,
+      blockquote,
+      ul {
         code {
           direction: ltr;
           text-align: center;
@@ -312,7 +325,7 @@ section#posts {
           padding: 0px 5px;
           background: @color-background-grey;
           border-radius: 3px;
-          font-family: consolas, menlo, monaco, monospace;
+          font-family: "WebFireCode", consolas, menlo, monaco, monospace;
           font-size: .85em;
         }
       }

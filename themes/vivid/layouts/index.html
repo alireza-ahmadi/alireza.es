@@ -10,9 +10,6 @@
                         <aside class="post-meta">
                             <span class="post-meta-holder">
                                 <time datetime="{{ .Date }}" class="post-date">{{ .Params.shamsidate }}</time>
-                                {{ range $key, $value := .Params.topics }}
-                                    <a class="post-category" href="{{ $baseURL }}/topics/{{ $value }}/">{{ index $list $value }}</a>
-                                {{ end }}
                             </span>
                         </aside>
 						
